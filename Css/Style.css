@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+#form > section.form-wrapper {
+    width: 100%;
+    max-width: 480px;
+}
+
+#form > section.form-wrapper > .card-form {
+    background-color: rgba(240, 248, 255, 0.500);
+    border-radius: 16px;
+    padding: 2em;
+    box-shadow: 0px 15px 13px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+#form > section.form-wrapper > .card-form > .form-header {
+    text-align: center;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#form > section.form-wrapper > .card-form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#form > section.form-wrapper > .card-form > form > .rel-input-group {
+    position: relative;
+}
+
+#form > form > .rel-input-group > input,
+#form > form > .rel-input-group > textarea {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#form > form > .rel-input-group > label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #888;
+    font-size: 1em;
+    pointer-events: none;
+    transform: translateY(-50%);
+    padding: 0 6px;
+    transition: 0.3s;
+
+}
+
+#form > form > .rel-input-group > input:focus +label,
+#form > form > .rel-input-group > textarea:focus +label,
+#form > form > .rel-input-group > input:valid +label,
+#form > form > .rel-input-group > textarea:valid +label  {
+    top: -10px;
+    font-size: 0.8em;
+    color: green;
+    
+}
+
+#form > form > .rel-buttons {
+    display: flex;
+    color: #EEAECA;
+    background-color: aqua;
+}
+
+
+#form > form #submitBtn {
+    margin-top: 1em;
+    padding: 14px;  
+    border: none;
+    border-radius: 10px;
+    background-color: #EEAECA;
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}
