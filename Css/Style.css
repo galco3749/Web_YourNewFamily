@@ -1,8 +1,8 @@
 :root{
     --bg-color-red: #50150A;
-    --bg-color-dark: #1c1f21;
+    --bg-color-dark: #111314;
     --font-color: #e1d3cb;
-    --detail-color-red: #932210;
+    --detail-color-red: #b4250f;
     --detail-color-dark: #4b4446;
 
     --medium-gap: 20px;
@@ -13,8 +13,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Montserrat;
+    scroll-behavior: smooth;
+    color: var(--font-color);
 }
 
-/* h1{
+h1{
     font-family: Almendra;
-} */
+}
+
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+
+/* NAV / MENÚ SUPERIOR */
+
+nav{
+    background-color: var(--bg-color-dark);
+}
+
+nav > .logo > li {
+    list-style: none;
+}
+
+nav > ul {
+list-style: none;    
+}
+
+nav > ul > li > a{
+    text-decoration: none;
+}
+
+nav > ul > li > a:hover{
+    color: var(--detail-color-red);
+
+}
+
+
+/* HEADER */
+
+header{
+    background-color: #50150A;
+    height: 100vh;
+}
+
+header > .Lilith > li{
+    list-style: none;
+}
+
+
+/* SECTION INTRO JUEGO */
+
+#intro-juego{
+    background-color: var(--bg-color-dark);
+    height: 100vh;
+}
