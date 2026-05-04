@@ -1,0 +1,20 @@
+:root{
+    --bg-color-red: #50150A;
+    --bg-color-dark: #1c1f21;
+    --font-color: #e1d3cb;
+    --detail-color-red: #932210;
+    --detail-color-dark: #4b4446;
+
+    --medium-gap: 20px;
+    --xl-gap: 40px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* h1{
+    font-family: Almendra;
+} */
