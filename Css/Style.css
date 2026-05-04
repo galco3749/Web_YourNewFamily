@@ -45,24 +45,10 @@ body p {
 
 
 
-.wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    padding: 0 40px;
-    max-width: 1200px;
-    min-height: 100vh;
-    flex-direction: column;
-    gap: var(--medium-gap);
-    background-color: var(--bg-color-dark);
-}
-
-
 
 nav {
     padding: 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     position: sticky;
     top: 0;
@@ -70,7 +56,6 @@ nav {
 }
 
 nav > img {
-    justify-content: left;
     min-width: 40px;
     max-width: 40px;
 }
@@ -78,9 +63,9 @@ nav > img {
 
 nav > ul {
     display: flex;
-    justify-content: stretch;
     list-style: none;
     gap: 24px;
+    margin: 0 auto;
 }
 
 nav > ul > li > a {
@@ -88,7 +73,6 @@ nav > ul > li > a {
     font-weight: bold;
     color: var(--font-color);
     text-decoration: none;
-
 }
 
 nav > ul > li > a:hover {
@@ -98,14 +82,84 @@ nav > ul > li > a:hover {
 
 
 
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1200px;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 60px;
+    background-color: var(--bg-color-dark);
+}
+
+
+.titulo {
+    font-family: 'Almendra', serif;
+    font-size: 32px;
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    padding: 80px 40px 40px 40px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    min-height: 100vh;
+}
+
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+
+
+
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.btn-group > a {
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--font-color);
+    color: var(--bg-color-dark);
+    transition: 0.3s;
+}
+
+.btn-group > a:hover {
+    background-color: var(--detail-color-red);
+    color: var(--font-color);
+}
 
 
 
 
 
+.lilith {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+}
 
-
-
+.lilith img {
+    min-width: 380px;
+    max-width: 624px;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
