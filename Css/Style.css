@@ -21,14 +21,16 @@
 
 
 nav {
-    align-content: center;
-    padding: 24px 0;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
-
+    top: 0;
+    background-color: aliceblue;
 }
 
 nav > img {
-    display: flex;
     justify-content: left;
     min-width: 40px;
     max-width: 40px;
@@ -36,10 +38,9 @@ nav > img {
 
 
 nav > ul {
-    justify-content: space-between;
-    justify-content: center;
-    list-style: none;
     display: flex;
+    justify-content: stretch;
+    list-style: none;
     gap: 24px;
 }
 
