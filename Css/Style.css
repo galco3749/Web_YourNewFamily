@@ -1,9 +1,9 @@
 :root{
-    --bg-color-red: rgb(80, 21, 10);
-    --bg-color-dark: rgb(28, 31, 33);
-    --font-color: rgb(225, 211, 203);
+    --bg-color-red: #50150a;
+    --bg-color-dark: #1c1f21;
+    --font-color: #e1d3cb;
     --detail-color-red: #932210;
-    --detail-color-dark: #4b4446;
+    --detail-color-dark: #3d393a;
 
     --medium-gap: 20px;
     --xl-gap: 40px;
@@ -22,11 +22,12 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Montserrat;
 }
 
-/* h1{
+h1{
     font-family: Almendra;
-} */
+}
 
 .img {
     width: 100%;
@@ -56,6 +57,7 @@ body p {
 }
 
 
+/* NAV / BARRA NAVEGACI0N */
 
 nav {
     padding: 20px;
@@ -101,12 +103,10 @@ nav > ul > li > a:hover {
     flex-direction: column;
 }
 
-
+/* HEADER */
 
 .titulo {
-    font-family: 'Almendra', serif;
-    font-size: 32px;
-    color: var(--font-color);
+    font-size: 2em;
     display: flex;
     justify-content: center;
     padding: 80px 40px 40px 40px;
@@ -129,7 +129,7 @@ header {
 .btn-group {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: var(--xl-gap);
 }
 
 .btn-group > a {
@@ -162,10 +162,13 @@ header {
 }
 
 
-
+/* TEXTO INTRO JUEGO */
 
 #intro-juego > div > p {
     padding: 300px 0 600px 0;
+    font-size: 32px;
+    text-align:center;
+    text-align-last: center;
 }
 
 
@@ -202,13 +205,19 @@ header {
 /* SECTION PORCENTAJES */
 
 #porcentajes{
-        height: 100vh;
-                display: flex;
-        justify-content: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
         align-items: center;
         gap: var(--xl-gap);
 
+    }
+
+#porcentajes > h2{
+    font-family: almendra;
+    font-size: 2em;
 }
+
 
     @keyframes rellenar{
       to{
@@ -241,7 +250,7 @@ header {
       transform: rotate(-90deg);
       transform-origin: 50%;
       stroke-dasharray: 100 100;
-      stroke: #AAA;
+      stroke: #3d393a;
     }
     circle:nth-child(2){ /* el segundo círculo, es el que se ve por encima del anterior y debe tener el color mas intenso y el area del porcentaje */
       stroke: var(--color);
@@ -250,6 +259,24 @@ header {
 
               
     }
+
+
+/* FOOTER */
+footer > h2{
+    /* background-color: var(--detail-color-dark); */
+    font-family: Almendra;
+}
+
+/* footer > .f-row > .f-icons{
+
+} */
+
+footer > .f-row > .f-iconos > a {
+    text-decoration: none;
+    color: var(--font-color);
+    font-size: 32px;
+
+}
 
 
 header,
