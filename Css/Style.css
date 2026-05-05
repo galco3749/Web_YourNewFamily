@@ -171,15 +171,25 @@ header {
 }
 
 
+
+
+#wiki {
+    padding: 10px 0 0 0;
+}
+
 #wiki .barra {
     display: flex;
+    justify-content: space-around;
     justify-content: center;
-    gap: var(--xl-gap);
-    padding: var(--medium-gap) 0;
+    gap: 0px;
+    padding: 0;
     background-color: var(--font-color);
+
 }
 
 #wiki .barra > a {
+    padding: var(--medium-gap);
+
     font-size: 18px;
     font-weight: bold;
     color: var(--bg-color-red);
@@ -188,15 +198,44 @@ header {
 
     display: inline-block;
     transform-origin: center;
+
+    padding: 8px 112px;
+    background-color: var(--font-color);
+    color: var(--bg-color-dark);
 }
 
 #wiki .barra > a:hover {
-    transform: scale(1.1);
     /* gap: var(--xl-gap);
     padding: var(--medium-gap) 0; */
     color: var(--font-color);
     background-color: var(--bg-color-red);
-    
+}
+
+#wiki > .contenedor {
+    background-color: #1c1f2188;
+    color: var(--font-color);
+
+    padding: 80px 0;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    column-gap: 170px;
+}
+
+#wiki > .contenedor > div {
+    flex: 1;
+}
+
+#wiki > .contenedor > div > img {
+    width: 130%;
+    height: 120%;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#wiki > .contenedor > div p {
+    padding: 15px;
 }
 
 
@@ -401,3 +440,25 @@ header,
     font-weight: bold;
     cursor: pointer;
 }
+
+#form > a {
+    position: absolute;
+    top: 80%;
+
+    
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: white;
+    color: var(--bg-color-dark);
+    transition: 0.3s;
+}
+
+/* form > a:hover {
+    background-color: var(--detail-color-red);
+    color: var(--font-color);
+} */
+
+
