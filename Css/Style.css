@@ -28,7 +28,11 @@
 
 
 body {
-    background-color: var(--bg-color-dark);
+    background-color: #1c1f2185;
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('../media/img/fondo.gif');
+    background-position: center;
     color: var(--font-color);
 }
 
@@ -91,7 +95,9 @@ nav > ul > li > a:hover {
     min-height: 100vh;
     flex-direction: column;
     gap: 60px;
-    background-color: var(--bg-color-dark);
+    /* background-color: var(--bg-color-dark); */
+    /* background-image: url('../media/img/fondo_ojos.gif'); */
+
 }
 
 
