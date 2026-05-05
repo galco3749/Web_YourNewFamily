@@ -1,135 +1,321 @@
 :root{
     --bg-color-red: #50150A;
-    --bg-color-dark: #111314;
+    --bg-color-dark: #1c1f21;
     --font-color: #e1d3cb;
-    --detail-color-red: #b4250f;
+    --detail-color-red: #932210;
     --detail-color-dark: #4b4446;
 
     --medium-gap: 20px;
     --xl-gap: 40px;
 }
 
+
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    /* scroll-snap-type: y mandatory; */
+}
+
+
 *{
+    /* background-color: var(); */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat;
-    scroll-behavior: smooth;
+}
+
+/* h1{
+    font-family: Almendra;
+} */
+
+.img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+body {
+    background-color: #1c1f2185;
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url('../media/img/fondo.gif');
+    background-position: center;
     color: var(--font-color);
 }
 
-h1{
-    font-family: Almendra;
+body  h1 {
+    font-family: 'Almendra', serif;
+    color: var(--font-color);
 }
 
-.wrapper{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 40px;
+body p {
+    font-size: 18px;
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
-/* NAV / MENÚ SUPERIOR */
 
-nav{
-    background-color: var(--bg-color-dark);
+nav {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-color-red);
 }
 
-nav > .logo > li {
-    list-style: none;
+nav > img {
+    min-width: 40px;
+    max-width: 40px;
 }
 
 nav > ul {
-list-style: none;    
+    display: flex;
+    list-style: none;
+    gap: 24px;
+    margin: 0 auto;
 }
 
-nav > ul > li > a{
+nav > ul > li > a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--font-color);
     text-decoration: none;
 }
 
-nav > ul > li > a:hover{
+nav > ul > li > a:hover {
     color: var(--detail-color-red);
-
 }
 
 
-/* HEADER */
 
-header{
-    background-color: #50150A;
-    height: 100vh;
-}
-
-header > .Lilith > li{
-    list-style: none;
-}
-
-
-/* SECTION INTRO JUEGO */
-
-#intro-juego{
-    background-color: var(--bg-color-dark);
-    height: 100vh;
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1200px;
+    min-height: 100vh;
+    flex-direction: column;
 }
 
 
-/* SECTION WIKI */
-#wiki{
-    background: var(--bg-color-red);
-    height: 100vh;
+
+.titulo {
+    font-family: 'Almendra', serif;
+    font-size: 32px;
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    padding: 80px 40px 40px 40px;
 }
 
-/* SECTION PORCENTAJES */
-
-#porcentajes{
-background-color: var(--bg-color-dark);
-        height: 100vh;
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    min-height: 100vh;
 }
 
-    @keyframes rellenar{
-      to{
-        stroke-dasharray: var(--porcentaje) 100;
-      }
-    }
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
 
-    body{
-      display: flex;
-      gap: 30px;
-    }
+.btn-group {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
-    .porcentajes{
-      position:relative;
-      
-    }
-    .porcentajes span{
-      position: absolute;
-      top: 0%;
-      left: 0%;
-      bottom: 0%;
-      right: 0%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font: 25px/1em Verdana;
-    }
+.btn-group > a {
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--font-color);
+    color: var(--bg-color-dark);
+    transition: 0.3s;
+}
 
-    circle{
-      fill: none;
-      stroke-width: 20;
-      transform: rotate(-90deg);
-      transform-origin: 50%;
-      stroke-dasharray: 100 100;
-      stroke: #AAA;
-    }
-    circle:nth-child(2){ /* el segundo círculo, es el que se ve por encima del anterior y debe tener el color mas intenso y el area del porcentaje */
-      stroke: var(--color);
-      stroke-dasharray: 0 100;
-      animation: rellenar .5s linear forwards;
-    }
+.btn-group > a:hover {
+    background-color: var(--detail-color-red);
+    color: var(--font-color);
+}
 
+.lilith {
+    display: flex;
+    justify-content: center;
+    flex: 0 0 auto;
+}
 
-
-/* SECTION CARRUSELES */
+.lilith img {
+    min-width: 380px;
+    max-width: 624px;
+    display: flex;
+    flex-direction: column;
+}
 
 
-/* FOOTER */
+
+
+#intro-juego > div > p {
+    padding: 300px 0 600px 0;
+}
+
+
+#wiki .barra {
+    display: flex;
+    justify-content: center;
+    gap: var(--xl-gap);
+    padding: var(--medium-gap) 0;
+    background-color: var(--font-color);
+}
+
+#wiki .barra > a {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--bg-color-red);
+    text-decoration: none;
+    transition: 0.3s;
+
+    display: inline-block;
+    transform-origin: center;
+}
+
+#wiki .barra > a:hover {
+    transform: scale(1.1);
+    /* gap: var(--xl-gap);
+    padding: var(--medium-gap) 0; */
+    color: var(--font-color);
+    background-color: var(--bg-color-red);
+    
+}
+
+
+
+
+header,
+#intro-juego,
+#wiki,
+#porcentajes,
+#carruseles {
+    /* para hacer que se ajuste a la sección */
+    scroll-snap-align: start;
+    min-height: 100vh;
+    /* ajusta según altura del nav */
+    scroll-margin-top: 80px; 
+}
+
+
+
+
+
+
+
+
+
+#form {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--bg-color-dark);
+}
+
+#form {
+    min-height: 100vh;
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+#form > section.form-wrapper {
+    width: 100%;
+    max-width: 480px;
+}
+
+#form > section.form-wrapper > .card-form {
+    background-color: rgba(240, 248, 255, 0.500);
+    border-radius: 16px;
+    padding: 2em;
+    box-shadow: 0px 15px 13px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+#form > section.form-wrapper > .card-form > .form-header {
+    text-align: center;
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#form > section.form-wrapper > .card-form > form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+#form > section.form-wrapper > .card-form > form > .rel-input-group {
+    position: relative;
+}
+
+#form > form > .rel-input-group > input,
+#form > form > .rel-input-group > textarea {
+    width: 100%;
+    padding: 14px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+#form > form > .rel-input-group > label {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    color: #888;
+    font-size: 1em;
+    pointer-events: none;
+    transform: translateY(-50%);
+    padding: 0 6px;
+    transition: 0.3s;
+
+}
+
+#form > form > .rel-input-group > input:focus +label,
+#form > form > .rel-input-group > textarea:focus +label,
+#form > form > .rel-input-group > input:valid +label,
+#form > form > .rel-input-group > textarea:valid +label  {
+    top: -10px;
+    font-size: 0.8em;
+    color: green;
+    
+}
+
+#form > form > .rel-buttons {
+    display: flex;
+    color: #EEAECA;
+    background-color: aqua;
+}
+
+
+#form > form #submitBtn {
+    margin-top: 1em;
+    padding: 14px;  
+    border: none;
+    border-radius: 10px;
+    background-color: #EEAECA;
+    width: 100%;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+}

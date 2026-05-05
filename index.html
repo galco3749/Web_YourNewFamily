@@ -17,13 +17,11 @@
     <link rel="stylesheet" href="Css/Style.css">
 </head>
 <body>
-    <div class="wrapper">
-        <nav>
-            <div class="logo">
-                <li>
-                    <img src="https://picsum.photos/seed/cult/300/180" alt="">
-                </li>             
-            </div>
+
+    <!-- nav fuera de wrapper para que se extienda a lo ancho de la pantalla, y no se vea afectado por el padding del wrapper -->
+    <nav>
+            <img src="https://picsum.photos/seed/cult/1200/720" alt="logo">
+            
             <ul>
                 <li>
                     <a href="#">
@@ -41,65 +39,86 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        Galeria
+                    <a href="form.html">
+                        Galería
                     </a>
                 </li>
             </ul>
-
         </nav>
+
+    <div class="wrapper">
+
         <header>
             <div class="titulo">
-
-                    <h1>
-                        Tu mamá
-                    </h1>
-
+                <h1>
+                    Your New Family
+                </h1>
             </div>
-            <div class="Lilith">
-                <li>
-                    <img src="https://picsum.photos/seed/girl/1200/720" alt="">
-                </li>               
+            <div class="bottom-section">
+                <div class="btn-group">
+                    <a href="https://meteora-games.itch.io/your-new-family" target="_blank" rel="noopener noreferrer">Steam</a>
+                    <a href="https://www.youtube.com/watch?v=oBqMvSBo2Uo&t=15s" target="_blank" rel="noopener noreferrer">Gameplay</a>
+                </div>
+                <div class="lilith">
+                    <img src="https://picsum.photos/seed/girl/1200/720" alt="">        
+                </div>
             </div>
-            
         </header>
-        
+
         <section id="intro-juego">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam iure perferendis unde delectus animi eveniet mollitia velit. Quam nemo recusandae ducimus, non repellat laboriosam. Iste omnis nam velit enim itaque.</p>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus optio earum sequi explicabo perferendis voluptas ab odio modi! Totam, quo! Quo aut, tenetur consectetur libero fuga quaerat velit. Accusamus!             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus optio earum sequi explicabo perferendis voluptas ab odio modi! Totam, quo! Quo aut, tenetur consectetur libero fuga quaerat velit. Accusamus!
+                </p>
+            </div>
         </section>
 
         <section id="wiki">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nobis vel, eum voluptate blanditiis itaque. Dolore eius asperiores vero sint ipsam similique esse hic voluptates, mollitia ipsa, fugit nostrum nobis.</p>
+            <div class="barra">
+                <a href="#">Protagonista</a>
+                <a href="#">Entornos</a>
+                <a href="#">Puzzles</a>
+                <a href="#">Gameplay</a>
+            </div>
+            
+            <div class="img-puzzles">
+                <img src="https://picsum.photos/seed/Puzzle/1200/720" alt="">
+            </div>
+            <div class="txt">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus debitis nobis voluptatem, labore quas illum expedita pariatur mollitia quaerat, quae magni necessitatibus optio repudiandae sapiente laborum fugit odit, doloribus sit.
+                </p>
+            </div>
         </section>
 
         <section id="porcentajes">
-            <div class="porcentajes" style="--porcentaje: 20; --color: #b4250f">
-                <svg width="150" height="150">
-                <circle r="65" cx="50%" cy="50%" pathLength="100"></circle>
-                <circle r="65" cx="50%" cy="50%" pathLength="100"></circle>
-                </svg>
-                <span>20%</span>
-            </div>
-            <div class="porcentajes" style="--porcentaje: 75; --color: #b4250f">
-                <svg width="150" height="150">
-                <circle r="65" cx="50%" cy="50%" pathLength="100"></circle>
-                <circle r="65" cx="50%" cy="50%" pathLength="100"></circle>
-                </svg>
-                <span>75%</span>
-            </div>
-
-
         </section>
 
         <section id="carruseles">
+            <div class="carrusel-galería">
 
+            </div>
+            <div class="carrusel-miembros">
+
+            </div>
         </section>
 
         <footer>
-            
+            <div class="f-row">
+                <div class="f-iconos">
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-itchio"></i>
+                    </a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </div>
+            </div> 
         </footer>
 
     </div>
-    
 </body>
 </html>
