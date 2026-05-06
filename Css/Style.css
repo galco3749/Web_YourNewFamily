@@ -436,3 +436,52 @@ header,
 
 
 
+/* MEDIA QUERIES PARA TABLET */
+
+@media screen and (max-width: 848px) {
+    .wrapper{
+        padding: 0 20px;
+    }
+
+
+    h1{
+        font-size: 32px;
+    }
+
+    .btn-group > a{
+        font-size: 24px;
+    }
+
+    #intro-juego > div > p{
+        font-size: 24px;
+    }
+
+     #wiki .barra > a {
+        font-size: 1.2em;
+    }
+
+     #wiki .txt > p{
+        font-size: 1em;
+    }
+
+     #porcentajes > h2{
+        font-size: 1.2em;
+    }
+
+     .porcentajes span{
+        font-size: 24px;
+    }   
+
+    footer{
+        padding: 10px;
+    }
+
+    footer > h2{
+        font-size: 1.2em;
+    }
+
+    footer > .f-row > .f-iconos > a {
+        font-size: 24px;
+    }
+    
+}
