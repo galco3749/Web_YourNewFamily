@@ -468,7 +468,7 @@ header,
         font-size: 1.2em;
     }
 
-     .porcentajes span{
+     #porcentajes span{
         font-size: 24px;
     }   
 
@@ -484,4 +484,58 @@ header,
         font-size: 24px;
     }
     
+}
+
+
+/* MEDIA QUERIES PARA MOBILE */
+
+@media screen and (width<= 480px){
+    .wrapper{
+        padding: 0 10px;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    .btn-group > a{
+        font-size: 12px;
+    }
+
+    #intro-juego > div > p{
+        font-size: 12px;
+    }
+
+     #wiki .barra > a {
+        font-size: 1em;
+    }
+
+     #wiki .txt > p{
+        font-size: 12px;
+    }
+
+     #porcentajes > h2{
+        font-size: 1em;
+    }
+
+    #porcentajes > .porcentajes > {
+        width: 80px;
+        height: 80px;   
+    }
+
+     #porcentajes span{
+        font-size: 12px;
+    }   
+
+    footer{
+        padding: 10px;
+    }
+
+    footer > h2{
+        font-size: 1em;
+    }
+
+    footer > .f-row > .f-iconos > a {
+        font-size: 12px;
+    }
 }
