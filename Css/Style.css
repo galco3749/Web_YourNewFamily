@@ -169,7 +169,7 @@ header {
 /* TEXTO INTRO JUEGO */
 
 #intro-juego > div > p {
-    padding: 300px 0 600px 0;
+    padding: 40px 0 600px 0;
     font-size: 32px;
     text-align:center;
     text-align-last: center;
