@@ -59,7 +59,10 @@ body p {
 
 /* NAV / BARRA NAVEGACI0N */
 
-nav {
+
+
+
+.menu-desktop {
     padding: 20px;
     display: flex;
     align-items: center;
@@ -67,6 +70,70 @@ nav {
     top: 0;
     background-color: var(--detail-color-red);
 }
+
+/* MENU HAMBURGUESA EXPERIMENTAL */
+.nav-mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 68px;  /* Esto es para ajustar la altura */
+    left: 0;
+    background-color: var(--bg-color-red);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.nav-mobile > .menu-mobile {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xl-size-gap);
+    font-size: 32px;
+}
+
+.icons-mobile {
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+
+.icons-mobile > .fa-times {
+    display: none;
+}
+
+
+#sideMenu{
+    display: none;   
+}
+
+/* Selector que se activa cuando el checkbox esta checked */
+/* Logica de toggle */
+.side-menu:checked ~ .nav-mobile {
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .nav-mobile > .fa-bars {
+    display: none;
+}
+
+.side-menu:checked ~ .nav-mobile > .fa-bars {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
 
 nav > img {
     min-width: 40px;
@@ -522,6 +589,23 @@ header,
 /* MEDIA QUERIES PARA MOBILE */
 
 @media screen and (width<= 480px){
+
+    /* MENU HAMBURGUESA */
+    .nav-desktop{
+
+        display: none;
+
+    }
+
+    .icons-mobile{
+
+        display: block;
+
+    }
+    
+
+
+
     .wrapper{
         padding: 0 10px;
     }
