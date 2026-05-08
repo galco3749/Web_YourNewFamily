@@ -416,21 +416,20 @@ header,
 /* PAGINA FORMULARIO */
 
 
+
 #form {
-    margin: 0;
+    margin: var(--xl-gap);
     padding: 0;
     box-sizing: border-box;
     font-family: Monsterrat;
     color: var(--bg-color-dark);
-}
-
-#form {
-
     min-height: 100vh;
     background: radial-gradient(circle, rgb(28, 31, 33) 0%, rgb(80, 21, 10, 1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: var(--xl-gap);
     padding: 2em;
 }
 
@@ -457,6 +456,7 @@ header,
 #form > section.form-wrapper > .card-form > .form-header > h1{
     color: var(--bg-color-dark);
     font-family: Almendra;
+    font-size: 2em;
 }
 
 #form > section.form-wrapper > .card-form > form {
@@ -521,6 +521,26 @@ header,
     cursor: pointer;
 }
 
+#form > a {
+    /* position: absolute; */
+    top: 80%;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--font-color);
+    color: var(--bg-color-dark);
+    transition: 0.3s;
+    
+}
+
+#form > a:hover{
+    background-color: var(--bg-color-dark);
+    color: var(--font-color);
+}
+
+
 
 
 
@@ -535,6 +555,8 @@ header,
     h1{
         font-size: 32px;
     }
+
+
 
     .btn-group > a{
         font-size: 24px;
@@ -586,6 +608,8 @@ header,
         font-size: 24px;
     }
 
+    
+
     .btn-group > a{
         font-size: 12px;
     }
@@ -626,25 +650,18 @@ header,
     footer > .f-row > .f-iconos > a {
         font-size: 12px;
     }
-}
-#form > a {
-    position: absolute;
-    top: 80%;
 
-    
-    padding: 8px 10px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration: none;
-    background-color: white;
-    color: var(--bg-color-dark);
-    transition: 0.3s;
-}
+    #form > section.form-wrapper > .card-form > .form-header > h1{
+      font-size: 24px;  
+    }
 
-/* form > a:hover {
-    background-color: var(--detail-color-red);
-    color: var(--font-color);
-} */
+    #form > section.form-wrapper > .card-form > form{
+        font-size: 12px;
+    }
+
+    #form > a{
+        font-size: 1em;
+    }
+}
 
 
