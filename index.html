@@ -33,7 +33,7 @@
                 </li>
                 <li>
                     <a href="form.html">
-                        Formulario compra
+                        Productos
                     </a>
                 </li>
                 <li>
@@ -49,7 +49,19 @@
             </ul>
         </nav>
 
-    <div class="wrapper">
+        <div class="wrapper">
+
+                <div class="abs-btn">
+            <a href="#footer-target" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+        </div>
+
+        <div class="abs-btns">
+            <a href="#" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
 
         <header>
             <div class="titulo">
@@ -92,7 +104,46 @@
             </div>
         </section>
 
+
         <section id="wiki">
+            <input type="radio" name="wiki-tab" id="tab-protagonista" checked>
+            <input type="radio" name="wiki-tab" id="tab-entornos">
+            <input type="radio" name="wiki-tab" id="tab-puzzles">
+            <input type="radio" name="wiki-tab" id="tab-gameplay">
+
+            <div class="barra">
+                <label for="tab-protagonista">Protagonista</label>
+                <label for="tab-entornos">Entornos</label>
+                <label for="tab-puzzles">Puzzles</label>
+                <label for="tab-gameplay">Gameplay</label>
+            </div>
+
+            <div class="contenedor-wiki">
+                
+                <div class="contenido" id="content-protagonista">
+                <div class="img-puzzles"><img src="https://picsum.photos/seed/picsum/600/300" alt="Protagonista"></div>
+                <div class="txt"><p>Texto sobre Lilith</p></div>
+                </div>
+
+                <div class="contenido" id="content-entornos">
+                <div class="img-puzzles"><img src="url_entornos.jpg" alt="Entornos"></div>
+                <div class="txt"><p>Descripción de los entornos...</p></div>
+                </div>
+
+                <div class="contenido" id="content-puzzles">
+                <div class="img-puzzles"><img src="url_puzzles.jpg" alt="Puzzles"></div>
+                <div class="txt"><p>Descripción de los puzzles...</p></div>
+                </div>
+
+                <div class="contenido" id="content-gameplay">
+                <div class="img-puzzles"><img src="url_gameplay.jpg" alt="Gameplay"></div>
+                <div class="txt"><p>Descripción de los puzzles...</p></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- <section id="wiki">
             <div class="barra">
                 <a href="#">Protagonista</a>
                 <a href="#">Entornos</a>
@@ -110,7 +161,7 @@
                 </div>
             </div>
             
-        </section>
+        </section> -->
 
         <section id="porcentajes">
             <h2>Narrativa:</h2>
@@ -149,7 +200,14 @@
             </div>
         </section>
 
-        <footer>
+        
+
+    </div>
+
+    <!-- DIV VACÍO QUE SIRVE COMO REFERENCIA PARA EL BOTÓN DE SCROLL DOWN -->
+    <div id="footer-target"></div>
+
+    <footer>
             <h2>Nuestras redes:</h2>
             <div class="f-row">
                 <div class="f-iconos">
@@ -167,7 +225,5 @@
                 <p>meteoragames@gmail.com</p>
             </div>
         </footer>
-
-    </div>
 </body>
 </html>
