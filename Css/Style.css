@@ -619,6 +619,28 @@ header,
     color: var(--font-color);
 }
 
+#gallery {
+    margin: var(--xl-gap);
+    
+}
+
+#gallery > .personajes > .Lilith,
+#gallery > .personajes > .Alpha,
+#gallery > .personajes > .Cairen
+{
+    padding: 40px 0px;
+}
+
+#gallery > .puzzles > .Puzzle-gramola,
+#gallery > .puzzles > .Puzzle-mesa,
+#gallery > .puzzles > .Puzzle-glifos{
+   padding: 40px 0px; 
+}
+
+#gallery h1{
+    font-size: 32px;
+}
+
 
 
 
