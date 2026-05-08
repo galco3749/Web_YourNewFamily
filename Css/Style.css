@@ -233,9 +233,9 @@ header {
 
 /* SECTION WIKI */
 
-#wiki{
-    height: 100%vh;
-
+#wiki {
+  margin-top: 300px;   
+  margin-bottom: 0px;
 }
 
 .barra {
@@ -393,12 +393,11 @@ input[type="radio"] {
 /* SECTION PORCENTAJES */
 
 #porcentajes{
-    height: 100vh;
     display: flex;
     justify-content: center;
         align-items: center;
         gap: var(--xl-gap);
-
+margin-top: 0px;
     }
 
 #porcentajes > h2{
