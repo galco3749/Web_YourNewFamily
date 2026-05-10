@@ -112,55 +112,87 @@ nav > ul > li > a:hover {
 /* BOTON FLECHA */
 
 /* BOTON POSICION ABSOLUTA */
-.abs-btn{
-    width: 50px;
-    height: 50px;
-    background-color: var(--bg-color-red);
-    position: fixed;
-    right: 20px;
-    top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: 0.3s;
+
+
+.smart-btn-container {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  animation: moveContainer linear;
+  animation-timeline: scroll(root);
 }
 
-.abs-btn:hover{
-    background-color: var(--detail-color-red);
-
+@keyframes moveContainer {
+  0%   { top: 80px; }
+  100% { top: calc(100vh - 70px); }
 }
 
-.abs-btn > a{
-    font-size: 30px;
-    color: var(--font-color);
-    
+.smart-btn-container a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.abs-btns{
-    width: 50px;
-    height: 50px;
-    background-color: var(--bg-color-red);
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: 0.3s;
+.smart-btn-container a i {
+  font-size: 30px;
+  color: var(--font-color);
 }
 
-.abs-btns:hover{
-    background-color: var(--detail-color-red);
-
+.smart-btn-container a:hover {
+  background-color: var(--detail-color-red);
 }
 
-.abs-btns > a{
-    font-size: 30px;
-    color: var(--font-color);
-    
+
+.btn-down {
+  animation: fadeDown linear;
+  animation-timeline: scroll(root);
 }
+
+@keyframes fadeDown {
+  0%, 40% {
+    opacity: 1;
+    pointer-events: auto; 
+    transform: rotate(0deg);
+  }
+  60%, 100% {
+    opacity: 0;
+    pointer-events: none; 
+    transform: rotate(180deg); 
+  }
+}
+
+
+.btn-up {
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeUp linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes fadeUp {
+  0%, 40% {
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(-180deg);
+  }
+  60%, 100% {
+    opacity: 1;
+    pointer-events: auto; 
+    transform: rotate(0deg); 
+  }
+}
+
 
 /* HEADER */
 
@@ -205,7 +237,7 @@ header {
 .btn-group > a:hover {
     background-color: var(--detail-color-red);
     color: var(--font-color);
-}
+} */
 
 .lilith {
     display: flex;
