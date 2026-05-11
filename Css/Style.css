@@ -677,6 +677,16 @@ header,
     justify-content: center;
 }
 
+
+/* MONICA */
+#gallery img{
+    width: 15%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0px 15px 13px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+
 #gallery > .puzzles > .titulo{
     display: flex;
     justify-content: center;
