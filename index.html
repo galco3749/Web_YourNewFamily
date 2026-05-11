@@ -22,32 +22,52 @@
 <body>
 
     <!-- nav fuera de wrapper para que se extienda a lo ancho de la pantalla, y no se vea afectado por el padding del wrapper -->
-    <nav>
-            <img src="https://picsum.photos/seed/cult/1200/720" alt="logo">
+    <nav class="nav-desktop">
+        <img src="https://picsum.photos/seed/cult/1200/720" alt="logo">
             
-            <ul>
-                <li>
-                    <a href="#">
-                        Home
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Tienda
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        Guías
-                    </a>
-                </li>
-                <li>
-                    <a href="form.html">
-                        Galería
-                    </a>
-                </li>
-            </ul>
-        </nav>
+        <ul class="menu-desktop">
+            <li>
+                <a href="#"> Home</a>
+            </li>
+            <li>
+                <a href="form.html"> Formulario compra</a>
+            </li>
+            <li>
+                <a href="#"> Guías</a>
+            </li>
+            <li>
+                <a href="#"> Galería </a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- Hamburger icon -->
+    <input class="side-menu" type="checkbox" id="sideMenu" />
+    <label class="icons-mobile" for="sideMenu">
+        <i class="fa-solid fa-bars"></i>
+        <i class="fa-solid fa-times"></i>
+    </label>
+
+    <!-- Menu mobile -->
+    <nav class="nav-mobile">
+        <ul class="menu-mobile">
+            <li>
+                <a href="#"> Home</a>
+            </li>
+            <li>
+                <a href="form.html"> Formulario compra</a>
+            </li>
+            <li>
+                <a href="#"> Guías</a>
+            </li>
+            <li>
+                <a href="#"> Galería </a>
+            </li>
+        </ul>
+    
+    </nav>
+
 
     <div class="wrapper">
 
@@ -146,6 +166,10 @@
                         <i class="fa-brands fa-youtube"></i>                  </a>
                 </div>
             </div> 
+            <h2>Nuestro contacto:</h2>
+            <div class="contact-info">
+                <p>meteoragames@gmail.com</p>
+            </div>
         </footer>
 
     </div>

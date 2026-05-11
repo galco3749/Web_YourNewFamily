@@ -58,14 +58,81 @@ body p {
 
 /* NAV / BARRA NAVEGACI0N */
 
-nav {
+
+
+
+.menu-desktop {
     padding: 20px;
     display: flex;
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: var(--bg-color-red);
+    background-color: var(--detail-color-red);
 }
+
+/* MENU HAMBURGUESA EXPERIMENTAL */
+.nav-mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 68px;  /* Esto es para ajustar la altura */
+    left: 0;
+    background-color: var(--bg-color-red);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.nav-mobile > .menu-mobile {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xl-size-gap);
+    font-size: 32px;
+}
+
+.icons-mobile {
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+
+.icons-mobile > .fa-times {
+    display: none;
+}
+
+
+#sideMenu{
+    display: none;   
+}
+
+/* Selector que se activa cuando el checkbox esta checked */
+/* Logica de toggle */
+.side-menu:checked ~ .nav-mobile {
+    max-height: 100%;
+}
+
+.side-menu:checked ~ .nav-mobile > .fa-bars {
+    display: none;
+}
+
+.side-menu:checked ~ .nav-mobile > .fa-bars {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
 
 nav > img {
     min-width: 40px;
@@ -79,6 +146,10 @@ nav > ul {
     margin: 0 auto;
 }
 
+nav > ul > li {
+    margin: 0px 20px 0px 20px;
+}
+
 nav > ul > li > a {
     font-size: 18px;
     font-weight: bold;
@@ -87,7 +158,7 @@ nav > ul > li > a {
 }
 
 nav > ul > li > a:hover {
-    color: var(--detail-color-red);
+    color: var(--bg-color-dark);
 }
 
 
@@ -171,10 +242,10 @@ header {
 }
 
 
+/* SECTION WIKI */
 
-
-#wiki {
-    padding: 10px 0 0 0;
+#wiki{
+    height: 100%vh;
 }
 
 #wiki .barra {
@@ -188,9 +259,8 @@ header {
 }
 
 #wiki .barra > a {
-    padding: var(--medium-gap);
-
-    font-size: 18px;
+    font-family: Almendra;
+    font-size: 1.5em;
     font-weight: bold;
     color: var(--bg-color-red);
     text-decoration: none;
@@ -237,6 +307,17 @@ header {
 #wiki > .contenedor > div p {
     padding: 15px;
 }
+
+#wiki .txt{
+    background-color: var(--bg-color-red);
+    padding: var(--xl-gap);
+}
+
+#wiki .txt > p{
+    margin: 0;
+    font-size: 1.2em;
+}
+
 
 
 
@@ -300,6 +381,13 @@ header {
 
 
 /* FOOTER */
+
+footer{
+    background-color: var(--detail-color-red);
+    padding: 20px;
+    bottom: 0;
+}
+
 footer > h2{
     /* background-color: var(--detail-color-dark); */
     font-family: Almendra;
@@ -324,7 +412,7 @@ header,
 #carruseles {
     /* para hacer que se ajuste a la sección */
     scroll-snap-align: start;
-    min-height: 100vh;
+    height: 100vh;
     /* ajusta según altura del nav */
     scroll-margin-top: 80px; 
 }
@@ -335,6 +423,7 @@ header,
 
 
 
+/* PAGINA FORMULARIO */
 
 
 #form {
@@ -377,6 +466,7 @@ header,
 
 #form > section.form-wrapper > .card-form > .form-header > h1{
     color: var(--bg-color-dark);
+    font-family: Almendra;
 }
 
 #form > section.form-wrapper > .card-form > form {
@@ -441,6 +531,129 @@ header,
     cursor: pointer;
 }
 
+
+
+
+/* MEDIA QUERIES PARA TABLET */
+
+@media screen and (max-width: 848px) {
+    .wrapper{
+        padding: 0 20px;
+    }
+
+
+    h1{
+        font-size: 32px;
+    }
+
+    .btn-group > a{
+        font-size: 24px;
+    }
+
+    #intro-juego > div > p{
+        font-size: 24px;
+    }
+
+     #wiki .barra > a {
+        font-size: 1.2em;
+    }
+
+     #wiki .txt > p{
+        font-size: 1em;
+    }
+
+     #porcentajes > h2{
+        font-size: 1.2em;
+    }
+
+     #porcentajes span{
+        font-size: 24px;
+    }   
+
+    footer{
+        padding: 10px;
+    }
+
+    footer > h2{
+        font-size: 1.2em;
+    }
+
+    footer > .f-row > .f-iconos > a {
+        font-size: 24px;
+    }
+    
+}
+
+
+/* MEDIA QUERIES PARA MOBILE */
+
+@media screen and (width<= 480px){
+
+    /* MENU HAMBURGUESA */
+    .nav-desktop{
+
+        display: none;
+
+    }
+
+    .icons-mobile{
+
+        display: block;
+
+    }
+    
+
+
+
+    .wrapper{
+        padding: 0 10px;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    .btn-group > a{
+        font-size: 12px;
+    }
+
+    #intro-juego > div > p{
+        font-size: 12px;
+    }
+
+     #wiki .barra > a {
+        font-size: 1em;
+    }
+
+     #wiki .txt > p{
+        font-size: 12px;
+    }
+
+     #porcentajes > h2{
+        font-size: 1em;
+    }
+
+    #porcentajes > .porcentajes > {
+        width: 80px;
+        height: 80px;   
+    }
+
+     #porcentajes span{
+        font-size: 12px;
+    }   
+
+    footer{
+        padding: 10px;
+    }
+
+    footer > h2{
+        font-size: 1em;
+    }
+
+    footer > .f-row > .f-iconos > a {
+        font-size: 12px;
+    }
+}
 #form > a {
     position: absolute;
     top: 80%;
