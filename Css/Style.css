@@ -14,7 +14,6 @@ html {
     scroll-behavior: smooth;
     /* scroll-snap-type: y proximity; */
     /* scroll-snap-type: y mandatory; */
-
 }
 
 
@@ -673,10 +672,71 @@ header,
     font-size: 32px;
 }
 
+#gallery > .personajes > .titulo{
+    display: flex;
+    justify-content: center;
+}
 
+#gallery > .puzzles > .titulo{
+    display: flex;
+    justify-content: center;
+}
 
+/* Lillith */
 
+#gallery > .personajes > .Lilith{
+    display: flex;
+}
 
+#gallery > .personajes > .Lilith > .lado{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    left: 2em;
+}
+
+#gallery > .personajes > .Lilith > .img{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 1em;
+}
+
+/* Alpha */
+
+#gallery > .personajes > .Alpha{
+    display: flex;
+}
+
+#gallery > .personajes > .Alpha > .lado{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+     left: 2em;
+}
+
+#gallery > .personajes > .Alpha > .img{
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+}
+
+/* Cairen */
+#gallery > .personajes > .Cairen{
+    display: flex;
+}
+
+#gallery > .personajes > .Cairen > .lado{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+     left: 2em;
+}
+
+#gallery > .personajes > .Cairen > .img{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1em;
+}
 /* MEDIA QUERIES PARA TABLET */
 
 @media screen and (max-width: 848px) {
