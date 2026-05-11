@@ -64,7 +64,7 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
-    background-color: var(--bg-color-red);
+    background-color: var(--detail-color-red);
 }
 
 nav > img {
@@ -79,15 +79,21 @@ nav > ul {
     margin: 0 auto;
 }
 
+nav > ul > li {
+    margin: 0px 20px 0px 20px;
+}
+
 nav > ul > li > a {
     font-size: 18px;
     font-weight: bold;
     color: var(--font-color);
     text-decoration: none;
+    transition: 0.333s;
 }
 
 nav > ul > li > a:hover {
-    color: var(--detail-color-red);
+    color: var(--bg-color-dark);
+    transform: scale(1.5);
 }
 
 
@@ -96,11 +102,96 @@ nav > ul > li > a:hover {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    padding: 0 40px;
-    max-width: 1200px;
+    padding: 0 200px;
+    max-width: 100vw;
     min-height: 100vh;
     flex-direction: column;
 }
+
+/* BOTON FLECHA */
+
+/* BOTON POSICION ABSOLUTA */
+
+
+.smart-btn-container {
+  position: fixed;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 9999;
+  animation: moveContainer linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes moveContainer {
+  0%   { top: 80px; }
+  100% { top: calc(100vh - 70px); }
+}
+
+.smart-btn-container a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--bg-color-red);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.smart-btn-container a i {
+  font-size: 30px;
+  color: var(--font-color);
+}
+
+.smart-btn-container a:hover {
+  background-color: var(--detail-color-red);
+}
+
+
+.btn-down {
+  animation: fadeDown linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes fadeDown {
+  0%, 40% {
+    opacity: 1;
+    pointer-events: auto; 
+    transform: rotate(0deg);
+  }
+  60%, 100% {
+    opacity: 0;
+    pointer-events: none; 
+    transform: rotate(180deg); 
+  }
+}
+
+
+.btn-up {
+  opacity: 0;
+  pointer-events: none;
+  animation: fadeUp linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes fadeUp {
+  0%, 40% {
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(-180deg);
+  }
+  60%, 100% {
+    opacity: 1;
+    pointer-events: auto; 
+    transform: rotate(0deg); 
+  }
+}
+
 
 /* HEADER */
 
@@ -145,7 +236,7 @@ header {
 .btn-group > a:hover {
     background-color: var(--detail-color-red);
     color: var(--font-color);
-}
+} */
 
 .lilith {
     display: flex;
@@ -164,20 +255,101 @@ header {
 /* TEXTO INTRO JUEGO */
 
 #intro-juego > div > p {
-    padding: 300px 0 600px 0;
+    padding: 40px 0 600px 0;
     font-size: 32px;
     text-align:center;
     text-align-last: center;
 }
 
 
-
+/* SECTION WIKI */
 
 #wiki {
-    padding: 10px 0 0 0;
+  margin-top: 300px;   
+  margin-bottom: 0px;
 }
 
-#wiki .barra {
+.barra {
+  display: flex;
+  justify-content: space-around; /* Separa los botones equitativamente */
+  background-color: var(--font-color); 
+  padding: 15px 0;
+  width: 100%;
+}
+
+.barra label {
+  color: var(--bg-color-dark);
+  font-weight: bold;
+  font-family: Almendra;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.barra label:hover {
+  color: var(--detail-color-red);
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.contenedor-wiki{
+    background-color: #1c1f21b7;
+  width: 100%;
+  padding: 60px 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.contenido {
+  display: none; 
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#tab-protagonista:checked ~ .contenedor-wiki #content-protagonista,
+#tab-entornos:checked ~ .contenedor-wiki #content-entornos,
+#tab-puzzles:checked ~ .contenedor-wiki #content-puzzles,
+#tab-gameplay:checked ~ .contenedor-wiki #content-gameplay {
+  display: flex; 
+}
+
+#tab-protagonista:checked ~ .barra label[for="tab-protagonista"],
+#tab-entornos:checked ~ .barra label[for="tab-entornos"],
+#tab-puzzles:checked ~ .barra label[for="tab-puzzles"],
+#tab-gameplay:checked ~ .barra label[for="tab-gameplay"] {
+  text-decoration: underline;
+  transform: scale(1.1);
+}
+
+.img-puzzles {
+  flex: 1;
+  max-width: 600px;
+}
+
+.img-puzzles img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.txt {
+  flex: 0 1 450px;
+  background-color: var(--bg-color-red); 
+  color: var(--font-color);
+  padding: 40px;
+  margin-left: -80px; 
+  z-index: 10;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+
+/* #wiki .barra {
     display: flex;
     justify-content: space-around;
     justify-content: center;
@@ -188,9 +360,8 @@ header {
 }
 
 #wiki .barra > a {
-    padding: var(--medium-gap);
-
-    font-size: 18px;
+    font-family: Almendra;
+    font-size: 1.5em;
     font-weight: bold;
     color: var(--bg-color-red);
     text-decoration: none;
@@ -205,8 +376,7 @@ header {
 }
 
 #wiki .barra > a:hover {
-    /* gap: var(--xl-gap);
-    padding: var(--medium-gap) 0; */
+    
     color: var(--font-color);
     background-color: var(--bg-color-red);
 }
@@ -238,17 +408,27 @@ header {
     padding: 15px;
 }
 
+#wiki .txt{
+    background-color: var(--bg-color-red);
+    padding: var(--xl-gap);
+}
+
+#wiki .txt > p{
+    margin: 0;
+    font-size: 1.2em;
+} */
+
+
 
 
 /* SECTION PORCENTAJES */
 
 #porcentajes{
-    height: 100vh;
     display: flex;
     justify-content: center;
         align-items: center;
         gap: var(--xl-gap);
-
+margin-top: 0px;
     }
 
 #porcentajes > h2{
@@ -300,6 +480,14 @@ header {
 
 
 /* FOOTER */
+
+footer{
+    background-color: var(--detail-color-red);
+    padding: 20px 80px;
+    bottom: 0;
+    /* width: 100vw; */
+}
+
 footer > h2{
     /* background-color: var(--detail-color-dark); */
     font-family: Almendra;
@@ -324,7 +512,7 @@ header,
 #carruseles {
     /* para hacer que se ajuste a la sección */
     scroll-snap-align: start;
-    min-height: 100vh;
+    height: 100vh;
     /* ajusta según altura del nav */
     scroll-margin-top: 80px; 
 }
@@ -335,23 +523,23 @@ header,
 
 
 
+/* PAGINA FORMULARIO */
+
 
 
 #form {
-    margin: 0;
+    margin: var(--xl-gap);
     padding: 0;
     box-sizing: border-box;
     font-family: Monsterrat;
     color: var(--bg-color-dark);
-}
-
-#form {
-
     min-height: 100vh;
     background: radial-gradient(circle, rgb(28, 31, 33) 0%, rgb(80, 21, 10, 1) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: var(--xl-gap);
     padding: 2em;
 }
 
@@ -377,6 +565,8 @@ header,
 
 #form > section.form-wrapper > .card-form > .form-header > h1{
     color: var(--bg-color-dark);
+    font-family: Almendra;
+    font-size: 2em;
 }
 
 #form > section.form-wrapper > .card-form > form {
@@ -442,23 +632,168 @@ header,
 }
 
 #form > a {
-    position: absolute;
+    /* position: absolute; */
     top: 80%;
-
-    
     padding: 8px 10px;
     border-radius: 8px;
     font-size: 16px;
     font-weight: bold;
     text-decoration: none;
-    background-color: white;
+    background-color: var(--font-color);
     color: var(--bg-color-dark);
     transition: 0.3s;
+    
 }
 
-/* form > a:hover {
-    background-color: var(--detail-color-red);
+#form > a:hover{
+    background-color: var(--bg-color-dark);
     color: var(--font-color);
-} */
+}
+
+#gallery {
+    margin: var(--xl-gap);
+    
+}
+
+#gallery > .personajes > .Lilith,
+#gallery > .personajes > .Alpha,
+#gallery > .personajes > .Cairen
+{
+    padding: 40px 0px;
+}
+
+#gallery > .puzzles > .Puzzle-gramola,
+#gallery > .puzzles > .Puzzle-mesa,
+#gallery > .puzzles > .Puzzle-glifos{
+   padding: 40px 0px; 
+}
+
+#gallery h1{
+    font-size: 32px;
+}
+
+
+
+
+
+/* MEDIA QUERIES PARA TABLET */
+
+@media screen and (max-width: 848px) {
+    .wrapper{
+        padding: 0 20px;
+    }
+
+
+    h1{
+        font-size: 32px;
+    }
+
+
+
+    .btn-group > a{
+        font-size: 24px;
+    }
+
+    #intro-juego > div > p{
+        font-size: 24px;
+    }
+
+     #wiki .barra > a {
+        font-size: 1.2em;
+    }
+
+     #wiki .txt > p{
+        font-size: 1em;
+    }
+
+     #porcentajes > h2{
+        font-size: 1.2em;
+    }
+
+     #porcentajes span{
+        font-size: 24px;
+    }   
+
+    footer{
+        padding: 10px;
+    }
+
+    footer > h2{
+        font-size: 1.2em;
+    }
+
+    footer > .f-row > .f-iconos > a {
+        font-size: 24px;
+    }
+    
+}
+
+
+/* MEDIA QUERIES PARA MOBILE */
+
+@media screen and (width<= 480px){
+    .wrapper{
+        padding: 0 10px;
+    }
+
+    h1{
+        font-size: 24px;
+    }
+
+    
+
+    .btn-group > a{
+        font-size: 12px;
+    }
+
+    #intro-juego > div > p{
+        font-size: 12px;
+    }
+
+     #wiki .barra > a {
+        font-size: 1em;
+    }
+
+     #wiki .txt > p{
+        font-size: 12px;
+    }
+
+     #porcentajes > h2{
+        font-size: 1em;
+    }
+
+    #porcentajes > .porcentajes > {
+        width: 80px;
+        height: 80px;   
+    }
+
+     #porcentajes span{
+        font-size: 12px;
+    }   
+
+    footer{
+        padding: 10px;
+    }
+
+    footer > h2{
+        font-size: 1em;
+    }
+
+    footer > .f-row > .f-iconos > a {
+        font-size: 12px;
+    }
+
+    #form > section.form-wrapper > .card-form > .form-header > h1{
+      font-size: 24px;  
+    }
+
+    #form > section.form-wrapper > .card-form > form{
+        font-size: 12px;
+    }
+
+    #form > a{
+        font-size: 1em;
+    }
+}
 
 
