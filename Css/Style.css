@@ -673,12 +673,17 @@ header,
     font-size: 32px;
 }
 
-/* Lillith */
-
 #gallery > .personajes > .titulo{
     display: flex;
     justify-content: center;
 }
+
+#gallery > .puzzles > .titulo{
+    display: flex;
+    justify-content: center;
+}
+
+/* Lillith */
 
 #gallery > .personajes > .Lilith{
     display: flex;
@@ -688,11 +693,12 @@ header,
     display: flex;
     flex-direction: column;
     padding: 1em;
+    left: 2em;
 }
 
 #gallery > .personajes > .Lilith > .img{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto auto auto;
     gap: 1em;
 }
 
@@ -706,11 +712,12 @@ header,
     display: flex;
     flex-direction: column;
     padding: 1em;
+     left: 2em;
 }
 
 #gallery > .personajes > .Alpha > .img{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: auto auto;
     gap: 1em;
 }
 
@@ -723,6 +730,7 @@ header,
     display: flex;
     flex-direction: column;
     padding: 1em;
+     left: 2em;
 }
 
 #gallery > .personajes > .Cairen > .img{
