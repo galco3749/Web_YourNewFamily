@@ -25,51 +25,42 @@
     <nav class="nav-desktop">
         <img src="https://picsum.photos/seed/cult/1200/720" alt="logo">
             
-        <ul class="menu-desktop">
-            <li>
-                <a href="#"> Home</a>
-            </li>
-            <li>
-                <a href="form.html"> Formulario compra</a>
-            </li>
-            <li>
-                <a href="#"> Guías</a>
-            </li>
-            <li>
-                <a href="#"> Galería </a>
-            </li>
-        </ul>
-    </nav>
+            <ul>
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <a href="form.html">
+                        Productos
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Guías
+                    </a>
+                </li>
+                <li>
+                    <a href="gallery.html">
+                        Galería
+                    </a>
+                </li>
+            </ul>
+        </nav>
 
+        <div class="wrapper">
+            <div id="top-target"></div>
 
-    <!-- Hamburger icon -->
-    <input class="side-menu" type="checkbox" id="sideMenu" />
-    <label class="icons-mobile" for="sideMenu">
-        <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-times"></i>
-    </label>
-
-    <!-- Menu mobile -->
-    <nav class="nav-mobile">
-        <ul class="menu-mobile">
-            <li>
-                <a href="#"> Home</a>
-            </li>
-            <li>
-                <a href="form.html"> Formulario compra</a>
-            </li>
-            <li>
-                <a href="#"> Guías</a>
-            </li>
-            <li>
-                <a href="#"> Galería </a>
-            </li>
-        </ul>
-    
-    </nav>
-
-
-    <div class="wrapper">
+            <div class="smart-btn-container">
+                <a href="#footer-target" class="btn-down" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-down"></i>
+                </a>
+                
+                <a href="#top-target" class="btn-up" rel="noopener noreferrer">
+                <i class="fa-solid fa-arrow-up"></i>
+                </a>
+            </div>
 
         <header>
             <div class="titulo">
@@ -91,12 +82,67 @@
         <section id="intro-juego">
             <div>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus optio earum sequi explicabo perferendis voluptas ab odio modi! Totam, quo! Quo aut, tenetur consectetur libero fuga quaerat velit. Accusamus!             Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae possimus optio earum sequi explicabo perferendis voluptas ab odio modi! Totam, quo! Quo aut, tenetur consectetur libero fuga quaerat velit. Accusamus!
+                    Lilith, una joven marcada por un pasado de adicciones, busca desesperadamente reconstruir
+                    su identidad cuando recibe la oferta de un enigmático caballero para retirarse a un centro de
+                    reinserción rural, prometiéndole paz y redención lejos de la gran ciudad. Sin embargo, este
+                    supuesto refugio es en realidad la fachada de una organización sectaria con tintes ocultistas
+                    que aprovecha su vulnerabilidad emocional para someterla a una sofisticada manipulación
+                    psicológica. 
+
+                    Bajo la falsa creencia de que trabaja en su propia superación, Lilith es coaccionada
+                    por el líder del culto para cumplir misiones cuyas consecuencias, a menudo trágicas, terminan
+                    por condenar a quienes ella intentaba salvar en un entorno de fantasía macabra.
+                    El juego propone una experiencia de horror psicológico y narrativa ambiental donde el jugador
+                    debe distinguir la realidad de los engaños de su "nueva familia" para sobrevivir en un entorno
+                    donde la vida de la protagonista está en juego. A través de la resolución de puzles y la
+                    interacción con personajes, el arco de Lilith evoluciona desde la inseguridad inicial hacia un
+                    endurecimiento necesario para enfrentar la corrupción y el peligro inminente del grupo. La
+                    trama profundiza en temas como la codependencia tóxica y el sacrificio, subrayando la premisa
+                    central del proyecto: que el paraíso no siempre quiere dejarte ir.
                 </p>
             </div>
         </section>
 
+
         <section id="wiki">
+            <input type="radio" name="wiki-tab" id="tab-protagonista" checked>
+            <input type="radio" name="wiki-tab" id="tab-entornos">
+            <input type="radio" name="wiki-tab" id="tab-puzzles">
+            <input type="radio" name="wiki-tab" id="tab-gameplay">
+
+            <div class="barra">
+                <label for="tab-protagonista">Protagonista</label>
+                <label for="tab-entornos">Entornos</label>
+                <label for="tab-puzzles">Puzzles</label>
+                <label for="tab-gameplay">Gameplay</label>
+            </div>
+
+            <div class="contenedor-wiki">
+                
+                <div class="contenido" id="content-protagonista">
+                <div class="img-puzzles"><img src="https://picsum.photos/seed/picsum/600/300" alt="Protagonista"></div>
+                <div class="txt"><p>Texto sobre Lilith</p></div>
+                </div>
+
+                <div class="contenido" id="content-entornos">
+                <div class="img-puzzles"><img src="url_entornos.jpg" alt="Entornos"></div>
+                <div class="txt"><p>Descripción de los entornos...</p></div>
+                </div>
+
+                <div class="contenido" id="content-puzzles">
+                <div class="img-puzzles"><img src="url_puzzles.jpg" alt="Puzzles"></div>
+                <div class="txt"><p>Descripción de los puzzles...</p></div>
+                </div>
+
+                <div class="contenido" id="content-gameplay">
+                <div class="img-puzzles"><img src="url_gameplay.jpg" alt="Gameplay"></div>
+                <div class="txt"><p>Descripción de los puzzles...</p></div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- <section id="wiki">
             <div class="barra">
                 <a href="#">Protagonista</a>
                 <a href="#">Entornos</a>
@@ -114,7 +160,7 @@
                 </div>
             </div>
             
-        </section>
+        </section> -->
 
         <section id="porcentajes">
             <h2>Narrativa:</h2>
@@ -153,7 +199,14 @@
             </div>
         </section>
 
-        <footer>
+        
+
+    </div>
+
+    <!-- DIV VACÍO QUE SIRVE COMO REFERENCIA PARA EL BOTÓN DE SCROLL DOWN -->
+    <div id="footer-target"></div>
+
+    <footer>
             <h2>Nuestras redes:</h2>
             <div class="f-row">
                 <div class="f-iconos">
@@ -171,7 +224,5 @@
                 <p>meteoragames@gmail.com</p>
             </div>
         </footer>
-
-    </div>
 </body>
 </html>
