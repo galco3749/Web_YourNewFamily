@@ -897,206 +897,192 @@ header,
 
 /* MEDIA QUERIES PARA TABLET */
 
-@media screen and (max-width: 848px) {
-    .wrapper{
-        padding: 0 20px;
-    }
+@media screen and (max-width: 480px){
 
-
-    h1{
-        font-size: 32px;
-    }
-
-
-
-    .btn-group > a{
-        font-size: 24px;
-    }
-
-    #intro-juego > div > p{
-        font-size: 24px;
-    }
-
-     #wiki .barra > a {
-        font-size: 1.2em;
-    }
-
-     #wiki .txt > p{
-        font-size: 1em;
-    }
-
-     #porcentajes > h2{
-        font-size: 1.2em;
-    }
-
-     #porcentajes span{
-        font-size: 24px;
-    }   
-
-    footer{
-        padding: 10px;
-    }
-
-    footer > h2{
-        font-size: 1.2em;
-    }
-
-    footer > .f-row > .f-iconos > a {
-        font-size: 24px;
-    }
-    
+.wrapper{
+    padding:0 16px;
 }
 
-
-/* MEDIA QUERIES PARA MOBILE */
-
-@media screen and (width<= 480px){
-
+/* NAV */
 .nav-desktop{
     display:none;
+}
+
+.side-menu:checked ~ .nav-mobile::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:70px;
+    background-color: var(--bg-color-dark);
+    z-index:3500;
 }
 
 .icons-mobile{
     display:block;
     position:fixed;
-    top:20px;
-    right:20px;
-    z-index:2000;
-    font-size:24px;
+    top:15px;
+    right:15px;
+    z-index:4000;
+    font-size:22px;
 }
 
-.nav-mobile{
-    z-index:1500;
-}
-
+/* HEADER */
 header{
-    z-index:1400;
-    gap:40px;
-}
-
-.wrapper{
-    padding:0 20px;
-    gap:40px;
-}
-
-.titulo,
-.bottom-section,
-.lilith,
-.btn-group{
-    position:relative;
-    z-index:1;
+    gap:30px;
+    min-height:auto;
 }
 
 h1{
-    font-size:28px;
+    font-size:26px;
     text-align:center;
+}
+
+.titulo{
+    padding:30px 0 10px 0;
 }
 
 .bottom-section{
     flex-direction:column;
-    gap:30px;
-}
-
-.btn-group{
-    width:100%;
-    align-items:center;
     gap:20px;
 }
 
-.btn-group>a{
+/* BOTONES PRINCIPALES A LO ANCHO */
+.btn-group{
+    display:flex;
+    flex-direction:column;
+    gap:var(--xl-gap);
     width:100%;
-    text-align:center;
-    font-size:16px;
 }
+
+.btn-group > a{
+    padding:8px 10px;
+    border-radius:8px;
+    font-size:24px;
+    text-decoration:none;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+/* resto igual */
 
 .lilith img{
     width:100%;
     max-width:100%;
+    min-width:unset;
 }
 
 #intro-juego>div>p{
-    font-size:16px;
-    text-align:center;
-    padding:20px 0 40px 0;
+    font-size:15px;
+    padding:10px 0 20px 0;
+}
+
+#wiki{
+    margin-top:20px;
 }
 
 .barra{
+    display:flex;
     flex-direction:column;
-    align-items:center;
-    gap:15px;
-    padding:20px 0;
+    gap:0;
 }
 
 .barra label{
-    width:100%;
     text-align:center;
-    padding:10px 20px;
-    border-radius:6px;
-    text-decoration:none;
-    transition:all 0.3s ease;
+    padding:12px;
+    border-radius:0;
+    font-size:16px;
 }
 
-.barra label:hover{
-    background-color:var(--detail-color-red);
-    color:var(--font-color);
+#tab-protagonista:checked ~ .barra label[for="tab-protagonista"],
+#tab-entornos:checked ~ .barra label[for="tab-entornos"],
+#tab-puzzles:checked ~ .barra label[for="tab-puzzles"],
+#tab-gameplay:checked ~ .barra label[for="tab-gameplay"]{
+    background-color: var(--detail-color-red);
+    color: var(--font-color);
 }
 
 .contenido{
     flex-direction:column;
-    gap:20px;
+    gap:15px;
+}
+
+.img-puzzles{
     width:100%;
 }
 
 .txt{
     margin-left:0;
-    padding:20px;
-    width:100%;
+    padding:15px;
 }
 
 .txt p{
     font-size:14px;
 }
 
-#wiki,
 #porcentajes{
-    position:relative;
-    z-index:1;
-}
-
-#porcentajes{
-    display:flex;
     flex-direction:column;
+    gap:30px;
     align-items:center;
-    gap:40px;
-    margin-top:40px;
 }
 
 #porcentajes h2{
-    text-align:center;
-    font-size:18px;
-}
-
-.porcentajes{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+    font-size:16px;
 }
 
 .porcentajes svg{
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
 }
 
 .porcentajes span{
-    margin-top:10px;
-    font-size:18px;
+    font-size:16px;
+}
+
+.slideshow-container{
+    width:100%;
+}
+
+.mySlides img{
+    width:100%;
+    height:auto;
+}
+
+.smart-btn-container{
+    display:none;
+}
+
+footer{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:20px;
+    padding:20px;
     text-align:center;
 }
 
-.side-menu:checked ~ .nav-mobile{
-    max-height:100%;
-    box-shadow:0 -68px 0 68px var(--detail-color-red);
+.f-row{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    align-items:center;
+}
+
+.f-iconos{
+    display:flex;
+    gap:15px;
+    justify-content:center;
+}
+
+.contact-info{
+    display:flex;
+    flex-direction:column;
+    gap:5px;
+    text-align:center;
 }
 
 header,
@@ -1105,73 +1091,8 @@ header,
 #porcentajes,
 #carruseles{
     height:auto;
-    margin-bottom:60px;
+    min-height:auto;
+    margin-bottom:40px;
 }
-
-footer{
-    padding:30px 20px;
-    text-align:center;
-}
-
-footer h2{
-    font-size:18px;
-    margin-bottom:10px;
-}
-
-footer .f-row .f-iconos{
-    display:flex;
-    justify-content:center;
-    gap:20px;
-}
-
-footer .f-row .f-iconos a{
-    font-size:20px;
-}
-
-#gallery .wrapper {
-    padding: 0 20px;
-}
-#gallery p {
-    font-size: 14px;
-    text-align: center;
-}
-#gallery h1 {
-    font-size: 22px;
-    text-align: center;
-}
-#gallery h2 {
-    font-size: 18px;
-    text-align: center;
-}
-#gallery .personajes .Lilith,
-#gallery .personajes .Alpha,
-#gallery .personajes .Cairen {
-    flex-direction: column;
-    align-items: center;
-}
-#gallery .personajes .img {
-    grid-template-columns: 1fr;
-}
-
-#gallery .puzzles div {
-    text-align: center;
-}
-#gallery .puzzles img {
-    width: 100%;
-}
-.cartas-ayuda,
-.cartas-principales {
-    grid-template-columns: 1fr;
-}
-#gallery .Comic {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-#gallery .Comic img {
-    width: 100%;
-}
-
-
 
 }
