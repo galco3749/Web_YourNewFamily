@@ -111,18 +111,12 @@ body p {
     display: none;
 }
 
-/* Selector que se activa cuando el checkbox esta checked */
-/* Logica de toggle */
+
 .side-menu:checked ~ .nav-mobile {
     max-height: 100%;
 }
 
-/* ICONOS */
-.side-menu:checked ~ .icons-mobile .fa-bars {
-    display: none;
-}
-
-.side-menu:checked ~ .icons-mobile .fa-times {
+.icons-mobile .fa-bars {
     display: block;
 }
 
@@ -130,9 +124,13 @@ body p {
     display: none;
 }
 
+.side-menu:checked ~ .icons-mobile .fa-bars {
+    display: none;
+}
 
-
-
+.side-menu:checked ~ .icons-mobile .fa-times {
+    display: block;
+}
 
 
 
