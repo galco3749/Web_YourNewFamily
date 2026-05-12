@@ -61,7 +61,7 @@ body p {
 
 
 
-.menu-desktop {
+.nav-desktop {
     padding: 20px;
     display: flex;
     align-items: center;
@@ -303,7 +303,7 @@ header {
 .btn-group > a:hover {
     background-color: var(--detail-color-red);
     color: var(--font-color);
-} */
+} 
 
 .lilith {
     display: flex;
