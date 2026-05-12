@@ -650,6 +650,19 @@ header,
     color: var(--font-color);
 }
 
+
+
+#gallery > .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding: 0 200px;
+    max-width: 100vw;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+
 #gallery {
     margin: var(--xl-gap);
     
@@ -660,6 +673,12 @@ header,
 #gallery > .personajes > .Cairen
 {
     padding: 40px 0px;
+}
+
+#gallery > .personajes img{
+    width: 100%;
+    height: auto;
+
 }
 
 #gallery > .puzzles > .Puzzle-gramola,
@@ -676,13 +695,6 @@ header,
     display: flex;
     justify-content: center;
 }
-
-
-/* MONICA */
-#gallery img{
-    width: 15%;
-}
-
 
 #gallery > .puzzles > .titulo{
     display: flex;
@@ -744,6 +756,25 @@ header,
     grid-template-columns: auto auto auto;
     gap: 1em;
 }
+
+
+#gallery .chibi img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain; /* o cover si quieres recorte */
+    display: block;
+}
+
+/* img{
+    width: 5px;
+    height: auto;
+} */
+
+
+
+
+
+
 /* MEDIA QUERIES PARA TABLET */
 
 @media screen and (max-width: 848px) {
@@ -863,5 +894,6 @@ header,
         font-size: 1em;
     }
 }
+
 
 
