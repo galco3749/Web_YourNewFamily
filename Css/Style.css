@@ -700,7 +700,10 @@ header,
 
 #gallery > .puzzles > .Puzzle-gramola,
 #gallery > .puzzles > .Puzzle-mesa,
-#gallery > .puzzles > .Puzzle-glifos{
+#gallery > .puzzles > .Puzzle-glifos
+#gallery > .puzzles > .Puzzle-nube
+#gallery > .puzzles > .Puzzle-estatuas
+#gallery > .puzzles > .Puzzle-recreativa{
    padding: 40px 0px; 
 }
 
