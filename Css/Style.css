@@ -948,7 +948,7 @@ h1{
     gap:20px;
 }
 
-/* BOTONES PRINCIPALES A LO ANCHO */
+/* BOTONES PRINCIPALES  */
 .btn-group{
     display:flex;
     flex-direction:column;
@@ -968,7 +968,6 @@ h1{
     text-align:center;
 }
 
-/* resto igual */
 
 .lilith img{
     width:100%;
@@ -1114,14 +1113,13 @@ header,
     text-align: center;
 }
 
-/* PERSONAJES */
+/* PJ */
 #gallery .personajes{
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-/* cada personaje en columna */
 #gallery .personajes > .Lilith,
 #gallery .personajes > .Alpha,
 #gallery .personajes > .Cairen{
@@ -1130,12 +1128,11 @@ header,
     text-align: center;
 }
 
-/* texto personajes */
 #gallery .personajes .lado{
     padding: 10px;
 }
 
-/* imágenes personajes -> 2 columnas máximo */
+/* PJ img */
 #gallery .personajes .img{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1194,4 +1191,275 @@ header,
     margin-bottom: 40px;
 }
 
+}
+
+
+
+/* MEDIA QUERIES PARA TABLET */
+@media screen and (max-width: 1024px) and (min-width: 481px) {
+
+.wrapper{
+    padding: 0 40px;
+}
+
+/* NAV */
+.nav-desktop{
+    padding: 15px;
+}
+
+nav > ul{
+    gap: 16px;
+}
+
+/* HEADER */
+header{
+    gap: 60px;
+    min-height: auto;
+}
+
+.titulo{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.bottom-section{
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.btn-group{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-group > a{
+    font-size: 24px;
+    padding: 10px 16px;
+}
+
+.lilith img{
+    width: 100%;
+    max-width: 500px;
+    min-width: unset;
+}
+
+/* INTRO */
+#intro-juego > div > p{
+    font-size: 20px;
+    padding: 20px 0 120px 0;
+}
+
+/* WIKI */
+#wiki{
+    margin-top: 100px;
+    margin-bottom: 120px;
+}
+
+.contenido{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.txt{
+    margin-left: 0;
+    padding: 25px;
+    width: 100%;
+}
+
+.img-puzzles{
+    width: 100%;
+}
+
+.img-puzzles img{
+    width: 100%;
+}
+
+/* BARRA WIKI  */
+.barra{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+    gap: 0;
+}
+
+.barra label{
+    text-align: center;
+    padding: 14px;
+    font-size: 18px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+/* ACTIVE STATE */
+#tab-protagonista:checked ~ .barra label[for="tab-protagonista"],
+#tab-entornos:checked ~ .barra label[for="tab-entornos"],
+#tab-puzzles:checked ~ .barra label[for="tab-puzzles"],
+#tab-gameplay:checked ~ .barra label[for="tab-gameplay"]{
+    background-color: var(--detail-color-red);
+    color: var(--font-color);
+    transform: scale(1.05);
+}
+
+/* PORCENTAJES */
+#porcentajes{
+    margin-top: 120px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+}
+
+.porcentajes svg{
+    width: 120px;
+    height: 120px;
+}
+
+/* CARRUSEL */
+.slideshow-container{
+    width: 100%;
+}
+
+.mySlides img{
+    width: 100%;
+    height: auto;
+}
+
+/* GALERÍA */
+#gallery .personajes .img{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#gallery .Comic > div{
+    grid-template-columns: 1fr;
+}
+
+/* CARTAS */
+.cartas-ayuda,
+.cartas-principales{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* FOOTER */
+footer{
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding: 30px;
+}
+
+.f-row{
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* GALERIA */
+
+#gallery{
+    margin: var(--xl-gap) 0;
+}
+
+/* TITULOS */
+#gallery h1{
+    font-size: 48px;
+    text-align: center;
+}
+
+#gallery h2{
+    font-size: 28px;
+    text-align: center;
+}
+
+/* PERSONAJES */
+
+#gallery .personajes{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+#gallery .personajes > .Lilith,
+#gallery .personajes > .Alpha,
+#gallery .personajes > .Cairen{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+#gallery .personajes .lado{
+    padding: 10px 20px;
+}
+
+/* PJ img */
+#gallery .personajes .img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+#gallery .personajes .img img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
+/* PUZZLES */
+
+#gallery .puzzles{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#gallery .puzzles > div{
+    padding: 10px 0;
+}
+
+#gallery .puzzles img{
+    width: 100%;
+    max-width: 700px;
+}
+
+#gallery .puzzles p{
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+/* COMIC */
+
+#gallery .Comic > div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#gallery .Comic img{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* CARTAS */
+
+.cartas-ayuda,
+.cartas-principales{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.cartas-ayuda img,
+.cartas-principales img{
+    width: 100%;
+}
+
+#gallery > div{
+    margin-bottom: 60px;
+}
 }
