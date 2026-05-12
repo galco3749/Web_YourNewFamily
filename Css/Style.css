@@ -512,19 +512,16 @@ footer > .f-row > .contact-info{
 
 /* footer > .f-row > .f-icons{
 
-.f-iconos > a {
+} */
+
+footer > .f-row > .f-iconos > a {
     text-decoration: none;
     color: var(--font-color);
     font-size: 32px;
 
 }
 
-.redes {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
-}
+
 header,
 #intro-juego,
 #wiki,
