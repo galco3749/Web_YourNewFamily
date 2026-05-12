@@ -744,13 +744,6 @@ header,
     justify-content: center;
 }
 
-
-/* MONICA */
-#gallery img{
-    width: 15%;
-}
-
-
 #gallery > .puzzles > .titulo{
     display: flex;
     justify-content: center;
