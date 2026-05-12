@@ -1095,4 +1095,103 @@ header,
     margin-bottom:40px;
 }
 
+
+
+
+/* GALERIA */
+#gallery{
+    margin: var(--xl-gap) 0;
+}
+
+/* títulos */
+#gallery h1{
+    font-size: 32px;
+    text-align: center;
+}
+
+#gallery h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* PERSONAJES */
+#gallery .personajes{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* cada personaje en columna */
+#gallery .personajes > .Lilith,
+#gallery .personajes > .Alpha,
+#gallery .personajes > .Cairen{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* texto personajes */
+#gallery .personajes .lado{
+    padding: 10px;
+}
+
+/* imágenes personajes -> 2 columnas máximo */
+#gallery .personajes .img{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+#gallery .personajes .img img{
+    width: 100%;
+    max-width: 160px;
+    height: auto;
+}
+
+/* PUZZLES */
+#gallery .puzzles{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#gallery .puzzles img{
+    width: 100%;
+    max-width: 100%;
+}
+
+#gallery .puzzles p{
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+/* COMIC */
+#gallery .Comic > div{
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+#gallery .Comic img{
+    width: 100%;
+    max-width: 100%;
+}
+
+/* CARTAS */
+.cartas-ayuda,
+.cartas-principales{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.cartas-ayuda img,
+.cartas-principales img{
+    width: 100%;
+}
+
+/* separación general */
+#gallery > div{
+    margin-bottom: 40px;
+}
+
 }
