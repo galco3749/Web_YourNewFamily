@@ -829,17 +829,57 @@ header,
 #gallery .chibi img {
     width: 180px;
     height: 180px;
-    object-fit: contain; /* o cover si quieres recorte */
+    object-fit: contain; 
     display: block;
 }
 
-/* img{
-    width: 5px;
+
+
+.cartas-ayuda,
+.cartas-principales {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+    margin-top: 20px;
+}
+
+.cartas-ayuda img,
+.cartas-principales img {
+    width: 100%;
     height: auto;
-} */
+    border-radius: 8px; 
+    transition: transform 0.3s;
+}
+
+.cartas-ayuda img:hover,
+.cartas-principales img:hover {
+    transform: scale(1.05); 
+}
 
 
 
+
+
+
+/* capas */
+
+.nav-desktop{
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+}
+
+.nav-mobile{
+    z-index: 3000;
+}
+
+.icons-mobile{
+    z-index: 4000;
+}
+
+.txt{
+    z-index: 1;
+}
 
 
 
@@ -1075,5 +1115,85 @@ footer .f-row .f-iconos{
 footer .f-row .f-iconos a{
     font-size:20px;
 }
+
+#gallery .wrapper {
+    padding: 0 20px;
+}
+#gallery p {
+    font-size: 14px;
+    text-align: center;
+}
+#gallery h1 {
+    font-size: 22px;
+    text-align: center;
+}
+#gallery h2 {
+    font-size: 18px;
+    text-align: center;
+}
+#gallery .personajes .Lilith,
+#gallery .personajes .Alpha,
+#gallery .personajes .Cairen {
+    flex-direction: column;
+    align-items: center;
+}
+#gallery .personajes .img {
+    grid-template-columns: 1fr;
+}
+#gallery .chibi {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#gallery .chibi img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+} 
+
+#gallery .chibi {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#gallery .chibi img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+#gallery .chibi {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#gallery .chibi img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+}
+
+#gallery .puzzles div {
+    text-align: center;
+}
+#gallery .puzzles img {
+    width: 100%;
+}
+.cartas-ayuda,
+.cartas-principales {
+    grid-template-columns: 1fr;
+}
+#gallery .Comic {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#gallery .Comic img {
+    width: 100%;
+}
+
+
 
 }
