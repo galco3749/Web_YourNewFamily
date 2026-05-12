@@ -420,60 +420,58 @@ input[type="radio"] {
 
 /* SECTION PORCENTAJES */
 
-#porcentajes{
+#porcentajes {
     display: flex;
     justify-content: center;
-        align-items: center;
-        gap: var(--xl-gap);
-margin-top: 0px;
-    }
+    align-items: center;
+    gap: var(--xl-gap);
+    margin-top: 0px;
+    flex-wrap: wrap; /* ¡AÑADIDO! Permite que los elementos pasen a la siguiente línea si no caben */
+}
 
-#porcentajes > h2{
+#porcentajes > h2 {
     font-family: almendra;
     font-size: 2em;
 }
 
-
-    @keyframes rellenar{
-      to{
+@keyframes rellenar {
+    to {
         stroke-dasharray: var(--porcentaje) 100;
-      }
     }
+}
 
+.porcentajes {
+    position: relative;
+    /* Evita que el contenedor del SVG se encoja y deforme el círculo */
+    flex-shrink: 0; 
+}
 
-    .porcentajes{
-      position:relative;
-      
-    }
-    .porcentajes span{
-      /* position: absolute; */
-      top: 0%;
-      left: 0%;
-      bottom: 0%;
-      right: 0%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: var(--xl-gap);
-      
-    }
+.porcentajes span {
+    position: absolute; /* ¡DESCOMENTADO! Para que el texto se superponga al círculo */
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--xl-gap);
+}
 
-    circle{
-        
-      fill: none;
-      stroke-width: 20;
-      transform: rotate(-90deg);
-      transform-origin: 50%;
-      stroke-dasharray: 100 100;
-      stroke: #3d393a;
-    }
-    circle:nth-child(2){ /* el segundo círculo, es el que se ve por encima del anterior y debe tener el color mas intenso y el area del porcentaje */
-      stroke: var(--color);
-      stroke-dasharray: 0 100;
-      animation: rellenar .5s linear forwards;
+circle {
+    fill: none;
+    stroke-width: 20;
+    transform: rotate(-90deg);
+    transform-origin: 50%;
+    stroke-dasharray: 100 100;
+    stroke: #3d393a;
+}
 
-              
-    }
+circle:nth-child(2) { 
+    stroke: var(--color);
+    stroke-dasharray: 0 100;
+    animation: rellenar .5s linear forwards;
+}
 
 
 /* FOOTER */
