@@ -58,7 +58,10 @@ body p {
 
 /* NAV / BARRA NAVEGACI0N */
 
-nav {
+
+
+
+.nav-desktop {
     padding: 20px;
     display: flex;
     align-items: center;
@@ -66,6 +69,71 @@ nav {
     top: 0;
     background-color: var(--detail-color-red);
 }
+
+/* MENU HAMBURGUESA EXPERIMENTAL */
+.nav-mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 68px;  /* Esto es para ajustar la altura */
+    left: 0;
+    background-color: var(--bg-color-red);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+
+.nav-mobile > .menu-mobile {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--xl-size-gap);
+    font-size: 32px;
+}
+
+.icons-mobile {
+    cursor: pointer;
+    font-size: 18px;
+    display: none;
+}
+
+
+.icons-mobile > .fa-times {
+    display: none;
+}
+
+
+.side-menu {
+    display: none;
+}
+
+
+.side-menu:checked ~ .nav-mobile {
+    max-height: 100%;
+}
+
+.icons-mobile .fa-bars {
+    display: block;
+}
+
+.icons-mobile .fa-times {
+    display: none;
+}
+
+.side-menu:checked ~ .icons-mobile .fa-bars {
+    display: none;
+}
+
+.side-menu:checked ~ .icons-mobile .fa-times {
+    display: block;
+}
+
+
+
 
 nav > img {
     min-width: 40px;
@@ -236,7 +304,7 @@ header {
 .btn-group > a:hover {
     background-color: var(--detail-color-red);
     color: var(--font-color);
-} */
+} 
 
 .lilith {
     display: flex;
@@ -831,69 +899,181 @@ header,
 /* MEDIA QUERIES PARA MOBILE */
 
 @media screen and (width<= 480px){
-    .wrapper{
-        padding: 0 10px;
-    }
 
-    h1{
-        font-size: 24px;
-    }
-
-    
-
-    .btn-group > a{
-        font-size: 12px;
-    }
-
-    #intro-juego > div > p{
-        font-size: 12px;
-    }
-
-     #wiki .barra > a {
-        font-size: 1em;
-    }
-
-     #wiki .txt > p{
-        font-size: 12px;
-    }
-
-     #porcentajes > h2{
-        font-size: 1em;
-    }
-
-    #porcentajes > .porcentajes > {
-        width: 80px;
-        height: 80px;   
-    }
-
-     #porcentajes span{
-        font-size: 12px;
-    }   
-
-    footer{
-        padding: 10px;
-    }
-
-    footer > h2{
-        font-size: 1em;
-    }
-
-    footer > .f-row > .f-iconos > a {
-        font-size: 12px;
-    }
-
-    #form > section.form-wrapper > .card-form > .form-header > h1{
-      font-size: 24px;  
-    }
-
-    #form > section.form-wrapper > .card-form > form{
-        font-size: 12px;
-    }
-
-    #form > a{
-        font-size: 1em;
-    }
+.nav-desktop{
+    display:none;
 }
 
+.icons-mobile{
+    display:block;
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index:2000;
+    font-size:24px;
+}
 
+.nav-mobile{
+    z-index:1500;
+}
 
+header{
+    z-index:1400;
+    gap:40px;
+}
+
+.wrapper{
+    padding:0 20px;
+    gap:40px;
+}
+
+.titulo,
+.bottom-section,
+.lilith,
+.btn-group{
+    position:relative;
+    z-index:1;
+}
+
+h1{
+    font-size:28px;
+    text-align:center;
+}
+
+.bottom-section{
+    flex-direction:column;
+    gap:30px;
+}
+
+.btn-group{
+    width:100%;
+    align-items:center;
+    gap:20px;
+}
+
+.btn-group>a{
+    width:100%;
+    text-align:center;
+    font-size:16px;
+}
+
+.lilith img{
+    width:100%;
+    max-width:100%;
+}
+
+#intro-juego>div>p{
+    font-size:16px;
+    text-align:center;
+    padding:20px 0 40px 0;
+}
+
+.barra{
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    padding:20px 0;
+}
+
+.barra label{
+    width:100%;
+    text-align:center;
+    padding:10px 20px;
+    border-radius:6px;
+    text-decoration:none;
+    transition:all 0.3s ease;
+}
+
+.barra label:hover{
+    background-color:var(--detail-color-red);
+    color:var(--font-color);
+}
+
+.contenido{
+    flex-direction:column;
+    gap:20px;
+    width:100%;
+}
+
+.txt{
+    margin-left:0;
+    padding:20px;
+    width:100%;
+}
+
+.txt p{
+    font-size:14px;
+}
+
+#wiki,
+#porcentajes{
+    position:relative;
+    z-index:1;
+}
+
+#porcentajes{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+#porcentajes h2{
+    text-align:center;
+    font-size:18px;
+}
+
+.porcentajes{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.porcentajes svg{
+    width:120px;
+    height:120px;
+}
+
+.porcentajes span{
+    margin-top:10px;
+    font-size:18px;
+    text-align:center;
+}
+
+.side-menu:checked ~ .nav-mobile{
+    max-height:100%;
+    box-shadow:0 -68px 0 68px var(--detail-color-red);
+}
+
+header,
+#intro-juego,
+#wiki,
+#porcentajes,
+#carruseles{
+    height:auto;
+    margin-bottom:60px;
+}
+
+footer{
+    padding:30px 20px;
+    text-align:center;
+}
+
+footer h2{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+footer .f-row .f-iconos{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+footer .f-row .f-iconos a{
+    font-size:20px;
+}
+
+}
