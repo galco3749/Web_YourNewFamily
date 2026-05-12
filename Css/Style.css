@@ -535,7 +535,28 @@ header,
 }
 
 
+#carruseles {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.carrusel-galería {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slideshow-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carrusel-galería h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 
 
@@ -705,23 +726,6 @@ header,
     object-fit: contain;
 }
 
-#gallery .chibi {
-    width: 220px;
-    height: 220px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin: 0 auto;
-}
-
-#gallery .chibi img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-}
-
 #gallery > .puzzles > .Puzzle-gramola,
 #gallery > .puzzles > .Puzzle-mesa,
 #gallery > .puzzles > .Puzzle-glifos,
@@ -824,12 +828,6 @@ header,
 }
 
 
-#gallery .chibi img {
-    width: 180px;
-    height: 180px;
-    object-fit: contain; 
-    display: block;
-}
 
 
 #gallery .Comic > div {
@@ -1151,40 +1149,6 @@ footer .f-row .f-iconos a{
 }
 #gallery .personajes .img {
     grid-template-columns: 1fr;
-}
-#gallery .chibi {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-#gallery .chibi img {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-} 
-
-#gallery .chibi {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-#gallery .chibi img {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
-}
-#gallery .chibi {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-#gallery .chibi img {
-    width: 160px;
-    height: 160px;
-    object-fit: contain;
 }
 
 #gallery .puzzles div {
