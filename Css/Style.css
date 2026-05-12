@@ -107,8 +107,8 @@ body p {
 }
 
 
-#sideMenu{
-    display: none;   
+.side-menu {
+    display: none;
 }
 
 /* Selector que se activa cuando el checkbox esta checked */
@@ -117,15 +117,18 @@ body p {
     max-height: 100%;
 }
 
-.side-menu:checked ~ .nav-mobile > .fa-bars {
+/* ICONOS */
+.side-menu:checked ~ .icons-mobile .fa-bars {
     display: none;
 }
 
-.side-menu:checked ~ .nav-mobile > .fa-bars {
+.side-menu:checked ~ .icons-mobile .fa-times {
     display: block;
 }
 
-
+.icons-mobile .fa-times {
+    display: none;
+}
 
 
 
